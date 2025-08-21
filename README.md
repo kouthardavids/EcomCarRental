@@ -48,12 +48,16 @@ ChauffeurLux is a digital-first e-commerce platform for premium chauffeur and lu
    ```bash
    npm run dev
    ```
-- To get into admin side:
-- email: admin@gmail.com
-- password: admin123
 
-- To get into customer side:
-- sign up or continue with google!
+Credentials for Testing
+
+Admin Login:
+
+Email: admin@gmail.com
+
+Password: admin123
+
+Customer Login:
   
 ## Configuration
 To run the project, you need to configure environment files (*.env*) for both backend and frontend.
