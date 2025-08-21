@@ -38,7 +38,7 @@ const BookingPage = () => {
     lastName: '',
     email: '',
     phone: '',
-    paymentMethod: 'card'
+    paymentMethod: 'stripe'
   });
 
   const isStepValid = (step) => {
@@ -469,7 +469,7 @@ const BookingPage = () => {
                 type="radio"
                 name="paymentMethod"
                 value="card"
-                checked={formData.paymentMethod === 'card'}
+                checked={formData.paymentMethod === 'stripe'}
                 onChange={(e) => handleInputChange('paymentMethod', e.target.value)}
               />
               <span>Stripe</span>
