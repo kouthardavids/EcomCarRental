@@ -506,7 +506,7 @@ const AdminDashboard = () => {
                           <>
                             <button
                               className="action-btn btn-accept"
-                              onClick={() => updateBookingStatus(booking.trip_id, 'confirmed', booking.customer_email, booking.customer_email, booking.vehicle_full_name)}
+                              onClick={() => updateBookingStatus(booking.trip_id, 'confirmed', booking.customer_email, booking.vehicle_full_name)}
                               title="Accept Booking"
                             >
                               <Check size={16} />
