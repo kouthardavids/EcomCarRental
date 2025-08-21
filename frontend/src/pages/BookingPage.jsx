@@ -1,4 +1,3 @@
-// BookingPage.jsx - FIXED
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { useLocation, useNavigate } from 'react-router-dom';
