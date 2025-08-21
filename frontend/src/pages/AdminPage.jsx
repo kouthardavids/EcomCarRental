@@ -675,10 +675,6 @@ const AdminDashboard = () => {
                     <span className="info-label">Trip ID:</span>
                     <span className="info-value">#{selectedBooking.trip_id}</span>
                   </div>
-                  <div className="info-item">
-                    <span className="info-label">Created:</span>
-                    <span className="info-value">{formatDate(selectedBooking.created_at)}</span>
-                  </div>
                 </div>
               </div>
 
