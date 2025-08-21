@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Inter', sans-serif;
+          background: #fafafa;
+          color: #1a1a1a;
+        }
+
+        .catalogue-app {
+          min-height: 100vh;
+          background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+        }
+
+        .loading, .error {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 60vh;
+          gap: 20px;
+        }
+
+        .spinner {
+          width: 40px;
+          height: 40px;
+          border: 3px solid #f0f0f0;
+          border-top: 3px solid #d4af37;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        .container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 120px 24px 40px;
+        }
+
+        .header {
+          margin-bottom: 48px;
+        }
+
+        .header h1 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #1a1a1a;
+          margin-bottom: 12px;
+          letter-spacing: -0.02em;
+        }
+
+        .header p {
+          font-size: 1.1rem;
+          color: #666;
+          font-weight: 400;
+        }
+
+        .categories {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 40px;
+          flex-wrap: wrap;
+        }
+
+        .category-btn {
+          background: white;
+          border: 1px solid #e5e5e5;
+          padding: 12px 24px;
+          border-radius: 100px;
+          cursor: pointer;
+          font-family: 'Inter', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #666;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+        }
+
+        .category-btn:hover {
+          background: #f9f9f9;
+          border-color: #d4af37;
+          transform: translateY(-1px);
+        }
+
+        .category-btn.active {
+          background: #d4af37;
+          border-color: #d4af37;
+          color: white;
+          box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .vehicles-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 32px;
+        }
+
+        .vehicle-card {
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+          border: 1px solid #f0f0f0;
+        }
+
+        .vehicle-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+          border-color: #e5e5e5;
+        }
+
+        .vehicle-image {
+          position: relative;
+          width: 100%;
+          height: 220px;
+          overflow: hidden;
+        }
+
+        .vehicle-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .vehicle-card:hover .vehicle-image img {
+          transform: scale(1.05);
+        }
+
+        .price-badge {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(10px);
+          color: white;
+          padding: 8px 12px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .vehicle-content {
+          padding: 24px;
+        }
+
+        .vehicle-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin-bottom: 8px;
+          line-height: 1.3;
+        }
+
+        .vehicle-meta {
+          display: flex;
+          gap: 16px;
+          margin-bottom: 16px;
+          font-size: 14px;
+          color: #666;
+        }
+
+        .vehicle-meta span {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .vehicle-description {
+          color: #555;
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 24px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .book-btn {
+          width: 100%;
+          background: #1a1a1a;
+          color: white;
+          border: none;
+          padding: 14px 24px;
+          border-radius: 12px;
+          cursor: pointer;
+          font-family: 'Inter', sans-serif;
+          font-size: 15px;
+          font-weight: 600;
+          transition: all 0.2s ease;
+        }
+
+        .book-btn:hover {
+          background: #d4af37;
+          transform: translateY(-2px);
+        }
+
+        .no-vehicles {
+          grid-column: 1 / -1;
+          text-align: center;
+          padding: 80px 20px;
+          color: #666;
+        }
+
+        .no-vehicles h3 {
+          font-size: 1.5rem;
+          margin-bottom: 12px;
+          color: #1a1a1a;
+        }
+
+        footer {
+          background: #1a1a1a;
+          color: white;
+          text-align: center;
+          padding: 32px 24px;
+          margin-top: 80px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .container {
+            padding: 100px 16px 24px;
+          }
+
+          .header h1 {
+            font-size: 2rem;
+          }
+
+          .categories {
+            gap: 8px;
+            justify-content: center;
+          }
+
+          .category-btn {
+            padding: 10px 20px;
+            font-size: 13px;
+          }
+
+          .vehicles-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+
+          .vehicle-content {
+            padding: 20px;
+          }
+        }
