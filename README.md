@@ -58,7 +58,9 @@ Email: admin@gmail.com
 Password: admin123
 
 Customer Login:
-  
+
+Sign up manually OR login via Google Authentication
+
 ## Configuration
 To run the project, you need to configure environment files (*.env*) for both backend and frontend.
 1.**Backend *.env file***:
