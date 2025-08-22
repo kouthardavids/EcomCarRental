@@ -35,6 +35,7 @@ ChauffeurLux is a digital-first e-commerce platform for premium chauffeur and lu
    git clone https://github.com/kouthardavids/EcomCarRental.git
    cd EcomCarRental
    ```
+   NOTE: You need to pull the video from the gitHub too
 2. **Install NPM packages**
 
    ```bash
