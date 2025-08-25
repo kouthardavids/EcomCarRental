@@ -38,7 +38,7 @@ ChauffeurLux is a digital-first e-commerce platform for premium chauffeur and lu
    NOTE: You need to pull the video from the gitHub too
 2. **Install NPM packages**
 
-   **Delete the current node_module packages in backend and frontend and reinstall:**
+   **Delete the current node_modules packages in backend and frontend and reinstall:**
    ```bash
    cd backend
    npm install
