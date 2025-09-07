@@ -28,21 +28,6 @@ const isPublicRoute = (url) => {
   return publicRoutes.some(route => url.includes(route));
 };
 
-// Flag to prevent multiple refresh attempts
-let isRefreshing = false;
-let failedQueue = [];
-
-const processQueue = (error, token = null) => {
-  failedQueue.forEach(prom => {
-    if (error) {
-      prom.reject(error);
-    } else {
-      prom.resolve(token);
-    }
-  });
-  failedQueue = [];
-};
-
 axiosInstance.interceptors.request.use(
   (config) => {
     // Only add auth header for non-public routes

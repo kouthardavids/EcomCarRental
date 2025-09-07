@@ -1,6 +1,6 @@
 import axiosInstance from './axiosInstance.js';
 
-// Token management
+// Token management: storing access in memory
 let accessToken = null;
 
 export const setAccessToken = (token) => {
