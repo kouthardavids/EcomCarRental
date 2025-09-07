@@ -506,7 +506,7 @@ const AdminDashboard = () => {
                           <>
                             <button
                               className="action-btn btn-accept"
-                              onClick={() => updateBookingStatus(booking.trip_id, 'confirmed', booking.customer_email, booking.customer_email, booking.vehicle_full_name)}
+                              onClick={() => updateBookingStatus(booking.trip_id, 'confirmed', booking.customer_email, booking.vehicle_full_name)}
                               title="Accept Booking"
                             >
                               <Check size={16} />
@@ -675,10 +675,6 @@ const AdminDashboard = () => {
                     <span className="info-label">Trip ID:</span>
                     <span className="info-value">#{selectedBooking.trip_id}</span>
                   </div>
-                  <div className="info-item">
-                    <span className="info-label">Created:</span>
-                    <span className="info-value">{formatDate(selectedBooking.created_at)}</span>
-                  </div>
                 </div>
               </div>
 
@@ -711,7 +707,7 @@ const AdminDashboard = () => {
                       selectedBooking.trip_id,
                       'confirmed',
                       selectedBooking.customer_email,
-                      selectedBooking.vehicle_full_name  // Add this parameter
+                      selectedBooking.vehicle_full_name
                     )}
                   >
                     <Check size={16} />
@@ -723,7 +719,7 @@ const AdminDashboard = () => {
                       selectedBooking.trip_id,
                       'cancelled',
                       selectedBooking.customer_email,
-                      selectedBooking.vehicle_full_name  // Add this parameter
+                      selectedBooking.vehicle_full_name
                     )}
                   >
                     <X size={16} />

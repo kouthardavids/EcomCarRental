@@ -50,7 +50,6 @@ export const deleteBooking = async (tripId) => {
   }
 };
 
-// Public API calls (no authentication required)
 export const fetchVehiclesWithImagesPublic = async () => {
   try {
     const response = await axiosInstance.get('/vehicle/public');

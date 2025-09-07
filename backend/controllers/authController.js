@@ -378,7 +378,7 @@ export const sendForgotPasswordEmail = async (req, res) => {
       `UPDATE users SET resetToken = ?, resetTokenExpiry = ? WHERE email = ?`, [token, expiry, email]
     )
 
-    const resetLink = `http://localhost:5173/reset-password/${token}`;
+    const resetLink = `http://localhost:5178/reset-password/${token}`;
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',

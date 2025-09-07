@@ -34,7 +34,6 @@ export const AuthProvider = ({ children }) => {
       
       if (storedUser) {
         try {
-          // Try to refresh the token using the HTTP-only cookie
           await checkAuthStatus();
         } catch (error) {
           console.error('Token refresh failed:', error);

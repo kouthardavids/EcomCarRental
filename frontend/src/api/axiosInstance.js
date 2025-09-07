@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
   withCredentials: true,
 });
 
-// List of public routes that don't require authentication
+// List of public routes that don't need authentication
 const publicRoutes = [
   '/login',
   '/register', 
@@ -23,7 +23,7 @@ const publicRoutes = [
   '/review/public'
 ];
 
-// Check if a URL is a public route
+// Checking if the route is public
 const isPublicRoute = (url) => {
   return publicRoutes.some(route => url.includes(route));
 };
@@ -57,7 +57,6 @@ axiosInstance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// axiosInstance.js - Update the response interceptor
 axiosInstance.interceptors.response.use(
   (response) => response,
   async (error) => {

@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from '../assets/logo__1_-removebg-preview.png';
 import { useAuth } from '../api/authContext';
-import { clearAccessToken, getCurrentUser } from '../api/authToken';
+import { getCurrentUser } from '../api/authToken';
 
 const Navbar = ({ transparent }) => {
   const [scrolled, setScrolled] = useState(false);
